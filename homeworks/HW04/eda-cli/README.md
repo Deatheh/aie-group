@@ -60,3 +60,64 @@ uv run eda-cli report data/example.csv --out-dir reports
 ```bash
 uv run pytest -q
 ```
+
+## Запуск HTTP-сервиса
+```bash
+uv run uvicorn eda_cli.api:app --reload --port 8000
+```
+
+Пояснения:
+
+- `eda_cli.api:app` - путь до объекта FastAPI `app` в модуле `eda_cli.api`;
+- `--reload` - автоматический перезапуск сервера при изменении кода (удобно для разработки);
+- `--port 8000` - порт сервиса (можно поменять при необходимости).
+
+После запуска сервис будет доступен по адресу:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Эндпоинты сервиса
+
+### 5. `POST /quality-flags-from-csv` – соблюдение флагов по CSV-файлу
+
+Эндпоинт принимает CSV-файл, внутри:
+
+- читает его в `pandas.DataFrame`;
+- вызывает функции из `eda_cli.core`:
+
+  - `summarize_dataset`,
+  - `missing_table`,
+  - `compute_quality_flags`;
+- возвращает оценку качества датасета в том же формате, что `/quality`.
+
+**Запрос:**
+
+```http
+POST /quality-flags-from-csv
+Content-Type: multipart/form-data
+file: <CSV-файл>
+```
+
+Через Swagger:
+
+- в `/docs` открыть `POST /quality-flags-from-csv`,
+- нажать `Try it out`,
+- выбрать файл (например, `data/example.csv`),
+- нажать `Execute`.
+
+**Пример вызова через `curl` (Linux/macOS/WSL):**
+
+```bash
+curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
+  -F "file=@data/example.csv"
+```
+
+Ответ будет содержать следующую структуру:
+
+"flags": {
+    "additionalProp1": true,
+    "additionalProp2": true,
+    "additionalProp3": true
+}
