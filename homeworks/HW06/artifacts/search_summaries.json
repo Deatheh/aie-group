@@ -9,10 +9,10 @@
   },
   "DecisionTree": {
     "best_params": {
-      "max_depth": null,
-      "min_samples_leaf": 20
+      "max_depth": 8,
+      "min_samples_leaf": 10
     },
-    "best_cv_roc_auc": 0.9112358432907914
+    "best_cv_roc_auc": 0.8961079757442139
   },
   "RandomForest": {
     "best_params": {
