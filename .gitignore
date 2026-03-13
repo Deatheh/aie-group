@@ -27,6 +27,7 @@ __pycache__/
 
 # Папки и файлы сборки/дистрибуции (если вдруг появятся)
 build/
+homeworks/HW08-09/data/
 dist/
 eggs/
 *.egg-info/
