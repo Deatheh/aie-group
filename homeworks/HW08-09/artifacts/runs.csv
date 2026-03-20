@@ -2,10 +2,7 @@ experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epoc
 E1,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=False",adam,0.001,0.0,0.0,15,0.8318873937677054,0.5283629079125083
 E2,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.3, batchnorm=False",adam,0.001,0.0,0.0,15,0.8200690509915014,0.550953888352802
 E3,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",adam,0.001,0.0,0.0,15,0.8525141643059491,0.4493278669821304
-E1,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=False",adam,0.001,0.0,0.0,15,0.8340563031161473,0.5172542643867877
-E2,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.3, batchnorm=False",adam,0.001,0.0,0.0,15,0.8214854815864022,0.5430290647505363
-E3,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",adam,0.001,0.0,0.0,15,0.8529567988668555,0.4496508335678841
 E4,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True, early_stopping=True(patience=4)",adam,0.001,0.0,0.0,14,0.8511862606232294,0.451357261232884
-O1_lr_too_high,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",adam,0.1,0.0,0.0,8,0.7950601983002833,0.6550801826097472
-O2_lr_too_low,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",adam,1e-05,0.0,0.0,8,0.7135269121813032,1.2563082928698055
-O3_sgd_momentum_wd,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",sgd,0.01,0.9,0.0001,12,0.8489730878186968,0.4496339999835822
+O1,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",adam,0.1,0.0,0.0,8,0.7950601983002833,0.6550801826097472
+O2,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",adam,1e-05,0.0,0.0,8,0.7135269121813032,1.2563082928698055
+O3,EMNIST,42,"hidden=[256/128], activation=relu, dropout=0.0, batchnorm=True",sgd,0.01,0.9,0.0001,12,0.8489730878186968,0.4496339999835822
