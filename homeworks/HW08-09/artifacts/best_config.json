@@ -1,19 +1,18 @@
 {
-  "hidden_sizes": [
-    256,
-    128
-  ],
-  "dropout_p": 0.3,
-  "use_batchnorm": false,
-  "optimizer": "Adam",
-  "lr": 0.001,
-  "momentum": 0.0,
-  "weight_decay": 0.0,
-  "dataset": "CIFAR10",
-  "seed": 42,
-  "fast_mode": true,
-  "epochs_trained": 14,
-  "best_val_accuracy": 0.47166666626930237,
-  "best_val_loss": 1.5136073112487793,
-  "test_accuracy": 0.4652
+    "hidden_sizes": [
+        256,
+        128
+    ],
+    "dropout_p": 0.0,
+    "use_batchnorm": true,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "dataset": "EMNIST",
+    "seed": 42,
+    "fast_mode": true,
+    "epochs_trained": 14,
+    "best_val_accuracy": 0.8511862606232294,
+    "best_val_loss": 0.451357261232884
 }
