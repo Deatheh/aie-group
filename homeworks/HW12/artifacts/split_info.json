@@ -1,0 +1,13 @@
+{
+  "train_size": 2592,
+  "val_size": 864,
+  "test_size": 864,
+  "train_end_idx": 2592,
+  "val_end_idx": 3456,
+  "train_start_date": "2025-01-01 00:00:00",
+  "train_end_date": "2025-04-18 23:00:00",
+  "val_start_date": "2025-04-19 00:00:00",
+  "val_end_date": "2025-05-24 23:00:00",
+  "test_start_date": "2025-05-25 00:00:00",
+  "test_end_date": "2025-06-29 23:00:00"
+}

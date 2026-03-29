@@ -1,0 +1,15 @@
+{
+  "architecture": "GRU",
+  "input_size": 15,
+  "hidden_size": 64,
+  "num_layers": 2,
+  "dropout": 0.2,
+  "window_size": 48,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "seed": 42,
+  "scaler": "StandardScaler",
+  "optimizer": "Adam",
+  "epochs_trained": 4,
+  "best_val_mae": 144.28868103027344
+}
